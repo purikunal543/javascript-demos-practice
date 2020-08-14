@@ -1,0 +1,18 @@
+if you want to add something in the end of array (push) then its time complexity is O(1)
+if you want to remove something from end of array (pop) then its time complexity is O(1)
+
+But if you want to add or remove something from array from middle or start then its time complexity is O(N) because you have to shift
+indexes as well by looping through so it make its time Complexity O(N)
+
+Note
+----------------------------
+concat in javascript arr1.concat(arr2) -> adds element of arr2 in arr1
+
+Mississauga
+var obj={
+a:'Hi',
+b:'Bi'
+}
+var fn="function(a){ console.log('hello'+a+this.a); return true }";
+var func=new Function("{ return "+fn+" };");
+func.call(obj).call(obj,1)

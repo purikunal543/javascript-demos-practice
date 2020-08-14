@@ -1,0 +1,11 @@
+search "omg" in "wmomjsomgbdhkadx"
+
+check 'w' with 'o' --> no match
+check 'm; with 'o' --> no match
+check 'o' with 'o' --> match found --> now check 'm' (of omg) with 'm' (after o in bigger string) --> match found
+	now check 'g' with 'j' no match found
+
+check 'j' with 'o' --> no match
+check 's' with 'o' --> no match
+check 'o' with 'o' --> match -> check 'm' with 'm' -> check 'g' with 'g' so match found completely
+ 
