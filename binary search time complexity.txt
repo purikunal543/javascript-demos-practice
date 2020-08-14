@@ -1,0 +1,41 @@
+Worst case or average case Log(n) [base 2 obviously]
+Best case O(1) (in case the number to be found is first, last or middle element of array)
+
+Worst case explanation
+
+if u find number of iterations required to search a number in array of 16 numbers (sorted ofcourse) it will give u 4 iterations
+In case u find number of iterations required to search a number in array of 32 numbers it will give you in 5 iterations
+
+so 2^4=16 and 2^5=32
+
+so log(N) is complexity because log(16) = 4 [base 2 ofcourse]
+log(32) = 5 [base 2 ofcourse]
+
+
+
+--------------------------
+function binarySearch(arr, num) {
+    // add whatever parameters you deem necessary - good luck!
+    function middleNumber(leftIndex, rightIndex) {
+        return Math.round(((left + right) / 2))
+    }
+    var left = 0;
+    var right = arr.length - 1;
+    var middle = middleNumber(left, right);
+    if (arr[middle] == num) return middle;
+    else if (arr[left] == num) return left;
+    else if (arr[right] == num) return right;
+    else {
+        while (left < (right - 1)) {
+            if (arr[middle] > num) {
+                right = middle
+            }
+            else {
+                left = middle
+            }
+            middle = middleNumber(left, right);
+            if (arr[middle] == num) return middle;
+        }
+        return -1
+    }    
+}
